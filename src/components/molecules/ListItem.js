@@ -1,20 +1,20 @@
-
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import theme from '../theme';
+import theme from '../theme/index';
 import React from 'react';
+import Text from '../atoms/Text';
 import ListBullet from '../atoms/ListBullet';
-import GlobalStyle from '../theme/GlobalStyle';
 
 const StyledListItem = styled.li`
-  cursor: ${(props) => props.onClick ? 'pointer' : ''};
-  pointer-events: ${(props) => props.disabled ? 'none' : ''};
-  opacity: ${(props) => props.disabled ? '0.5' : ''};
+  cursor: ${(props) => (props.onClick ? 'pointer' : '')};
+  pointer-events: ${(props) => (props.disabled ? 'none' : '')};
+  opacity: ${(props) => (props.disabled ? '0.5' : '')};
   &:hover,
   &:focus {
-    background: ${(props) => props.onClick ? props.theme.color.translucent : ''};
+    background: ${(props) =>
+      props.onClick ? props.theme.color.translucent : ''};
   }
-  color: ${(props) => props.color ? props.theme.color[props.color] : ''};
+  color: ${(props) => (props.color ? props.theme.color[props.color] : '')};
   width: 100%;
   height: 20px;
   color: red;
@@ -23,6 +23,12 @@ const StyledListItem = styled.li`
   justify-content: space-between;
   max-width: 768px;
   font-family: 'Inter';
+  margin-bottom: 21px;
+  font-weight: 550;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 const Bullet = styled.span`
@@ -30,38 +36,45 @@ const Bullet = styled.span`
   height: 6px;
   color: red;
   border-radius: 50%;
-  background: #A69AEC;
-`
+  background: #a69aec;
+`;
 const StatisticsNameWrap = styled.div`
   display: flex;
   align-items: center;
-`
+`;
 
 const StatisticsName = styled.span`
   font-size: 12px;
-  margin: 0 10px 0 25px;
-`
+  margin: 0 25px 0 10px;
+`;
 const StatisticsNumberWrap = styled.div`
   display: flex;
-`
+`;
 const StatisticsPercent = styled.span`
   margin-left: 5px;
-  color: #A6ACBE;
-`
+  color: #a6acbe;
+`;
 
-const ListItem = () => {
+const ListItem = ({ children, value, percent, color }, props) => {
   return (
     <StyledListItem>
       <StatisticsNameWrap>
-        <Bullet />
-        <StatisticsName>Av. Lesson Rating</StatisticsName>
+        <ListBullet classNames="fff" color={color}></ListBullet>
+        <StatisticsName>
+          <Text color="greyDarker" size="s">
+            {children}
+          </Text>
+        </StatisticsName>
       </StatisticsNameWrap>
       <StatisticsNumberWrap>
-        20 <StatisticsPercent>(32%)</StatisticsPercent>
+        <Text color="greyDarker" size="s">
+          {value}
+        </Text>
+        <StatisticsPercent>({percent}%)</StatisticsPercent>
       </StatisticsNumberWrap>
     </StyledListItem>
-  )
-}
+  );
+};
 
 StyledListItem.propTypes = {
   onClick: PropTypes.func,

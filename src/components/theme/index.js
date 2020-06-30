@@ -35,6 +35,7 @@ theme.fontFamily.roboto = 'Roboto';
 theme.fontFamily.averta = 'Averta';
 
 theme.fontSize = {};
+theme.fontSize.xxxxxl = '42px';
 theme.fontSize.xxxxl = '32px';
 theme.fontSize.xxxl = '28px';
 theme.fontSize.xxl = '24px';

@@ -1,18 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import theme from '../theme';
+import theme from '../theme/index';
 
 const ListBullet = styled(
   ({
     color,
-    component
-  }) => React.createElement(component, color),
+    component,
+    ...props
+  }) => React.createElement(component, props),
 )`
-  color: ${(props) => props.color ? props.theme.color[props.color] : ''};
-  padding: 0;
-  margin: 0;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
+  background: ${(props) => (props.color ? props.theme.color[props.color] : '')};
 `;
 
 ListBullet.propTypes = {
@@ -21,7 +22,7 @@ ListBullet.propTypes = {
 };
 
 ListBullet.defaultProps = {
-  component: 'div',
+  component: 'span',
 };
 
 export default ListBullet;

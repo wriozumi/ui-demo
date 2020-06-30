@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const Img = styled.img`
+  display: flex;
+  margin: 0 auto;
   width: ${(props) => props.width || ''};
   height: ${(props) => props.height || ''};
   position: ${(props) => props.isLoaded ? 'static' : 'initial'};
