@@ -22,7 +22,7 @@ const StyledListItem = styled.li`
   align-items: center;
   justify-content: space-between;
   max-width: 768px;
-  font-family: 'Inter Regular';
+  font-family: 'Inter';
 `;
 
 const Bullet = styled.span`
