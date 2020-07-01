@@ -15,18 +15,11 @@ const styles = {
   },
 };
 
-const List = styled(
-  ({
-    type,
-    ...props
-  }) => React.createElement(
-    props.type === 'ordered' ? 'ol' : 'ul',
-    props,
-  ),
+const List = styled(({ type, ...props }) =>
+  React.createElement(props.type === 'ordered' ? 'ol' : 'ul', props)
 )`
-  margin: 0;
   list-style-type: ${styles.listStyleType};
-  list-style-position: ${(props) => props.type ? 'outside' : ''};
+  list-style-position: ${(props) => (props.type ? 'outside' : '')};
 `;
 
 List.propTypes = {

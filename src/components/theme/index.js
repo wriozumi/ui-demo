@@ -1,6 +1,6 @@
 const theme = {};
 
-theme.borderRadius = '2px';
+theme.borderRadius = '1rem';
 
 theme.color = {};
 theme.color.blueDark = '#6763D0';
@@ -53,7 +53,7 @@ theme.fontWeight.medium = 500;
 theme.fontWeight.semibold = 600;
 theme.fontWeight.bold = 700;
 
-theme.pxScale = 8;
+theme.pxScale = 5;
 
 theme.px = (value) => {
   const values = [].concat(value);

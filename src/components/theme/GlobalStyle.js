@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
-import {InterFontWoff} from '../../assets/fonts/Inter/Inter-Medium.woff';
-import {InterFontWoff2} from '../../assets/fonts/Inter/Inter-Medium.woff2';
-
+import { InterFontWoff } from '../../assets/fonts/Inter/Inter-Medium.woff';
+import { InterFontWoff2 } from '../../assets/fonts/Inter/Inter-Medium.woff2';
 
 const GlobalStyle = createGlobalStyle`
     @font-face {
@@ -16,7 +15,8 @@ const GlobalStyle = createGlobalStyle`
   body {  
     font-family: 'Inter';
     font-size: 15px;
+    background-color: #E5E5E5
   }
-`
+`;
 
 export default GlobalStyle;
