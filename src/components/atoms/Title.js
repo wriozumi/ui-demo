@@ -7,6 +7,8 @@ const Title = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  font-size: ${(props) =>
+    props.size ? props.theme.fontSize[props.size] : '8vw'};
   padding: ${(props) => props.theme.px([1, 3])};
   color: ${(props) =>
     props.isSelected ? props.theme.color.white : props.theme.color.grey};

@@ -15,7 +15,9 @@ const StyledOverallResult = styled(({ color, component, ...props }) =>
 const OverallResult = () => {
   return (
     <StyledOverallResult>
-      <Text absolute color="greyDarker">99%</Text>
+      <Text weight="semibold" absolute color="greyDarker">
+        99%
+      </Text>
       <Img width="50%" height="50%" src={image} alt="card's overall result" />
     </StyledOverallResult>
   );

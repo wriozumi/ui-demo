@@ -6,11 +6,13 @@ import ListItem from '../molecules/ListItem';
 import OverallResult from '../molecules/OverallRusult';
 import Tabs from '../molecules/Tabs';
 import Space from '../atoms/Space';
+import CardHeader from '../molecules/CardHeader';
 import CardBody from '../atoms/CardBody';
 
 const Card = (props) => {
   return (
     <Container>
+      <CardHeader backgroundColor="blueDark" shape="bluntEdged" />
       <CardBody backgroundColor="white" shape="bluntEdged">
         <Space padding={[4, 4]}>
           <Tabs>

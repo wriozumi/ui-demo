@@ -10,11 +10,11 @@ theme.color.red = '#F97D7D';
 theme.color.yellow = '#FFE39A';
 theme.color.pink = '#FCAAAA';
 theme.color.teal = '#B0F1DB';
-theme.color.white = '#ffffff';
+theme.color.white = '#fff';
 theme.color.grey = '#A6ACBE';
 theme.color.greyDark = '#727171';
 theme.color.greyDarker = '#303236';
-theme.color.black = '#000000';
+theme.color.black = '#000';
 theme.color.translucentLighter = 'rgba(255, 255, 255, 0.5)';
 theme.color.translucentLight = 'rgba(255, 255, 255, 0.3)';
 theme.color.translucent = 'rgba(0, 0, 0, 0.1)';
@@ -58,7 +58,7 @@ theme.pxScale = 5;
 theme.px = (value) => {
   const values = [].concat(value);
   return values
-    .map((v) => typeof v === 'string' ? v : `${v * theme.pxScale}px`)
+    .map((v) => (typeof v === 'string' ? v : `${v * theme.pxScale}px`))
     .join(' ');
 };
 

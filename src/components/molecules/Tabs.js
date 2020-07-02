@@ -32,6 +32,7 @@ class Tabs extends React.Component {
         <TitleContainer>
           {React.Children.map(children, (tab, index) => (
             <Title
+              size="xs"
               isSelected={index === selectedTabIndex}
               onClick={this.onTabClick({ index, title: tab.props.title })}
             >
