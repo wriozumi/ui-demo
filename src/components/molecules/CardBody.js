@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import View from '../atoms/View';
+import { device } from '../theme/Breakpoints';
 import theme from '../theme';
 
 const styles = {
@@ -36,6 +37,10 @@ const CardBody = styled(
   background-color: ${(props) => props.theme.color[props.backgroundColor]};
   box-shadow: ${(props) =>
     props.elevated ? '0 0.375rem 1rem 0 rgba(0, 0, 0, 0.16)' : ''};
+
+  @media ${device.mobileL} {
+    padding: 0.5rem 0 2rem;
+  }
 `;
 
 CardBody.propTypes = {

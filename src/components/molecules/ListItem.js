@@ -13,7 +13,6 @@ const StyledListItem = styled.li`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 48rem;
   font-family: 'Inter';
   margin-bottom: 1.3125rem;
   font-weight: 550;
