@@ -4,6 +4,9 @@ import View from '../atoms/View';
 import Tab from '../atoms/Tab';
 import Title from '../atoms/Title';
 import TitleContainer from '../atoms/TitleContainer';
+import Img from '../atoms/Img';
+import Space from '../atoms/Space';
+import InfoIcon from '../../assets/images/svg/info.svg';
 
 class Tabs extends React.Component {
   state = {
@@ -39,6 +42,9 @@ class Tabs extends React.Component {
               {tab.props.title}
             </Title>
           ))}
+          <Space margin={[0, 0, 0, 'auto']}>
+            <Img src={InfoIcon} alt="info icon" />
+          </Space>
         </TitleContainer>
         {children[selectedTabIndex]}
       </View>
