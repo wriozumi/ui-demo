@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { device } from '../theme/Breakpoints';
+import theme from '../theme/index';
 
 const Title = styled.div`
   display: flex;
-  flex: 0;
   white-space: nowrap;
   align-items: center;
   justify-content: center;
@@ -24,6 +25,13 @@ const Title = styled.div`
     props.isSelected
       ? props.theme.color.primary
       : props.theme.color.transparent};
+  
+  ${(props) =>
+    props.size === 'xxs' &&
+    `@media ${device.mobileM} {
+      font-size: ${theme.fontSize.xs};
+    }
+  `}
 `;
 
 export default Title;

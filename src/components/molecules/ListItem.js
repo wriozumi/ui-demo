@@ -1,19 +1,11 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import theme from '../theme/index';
 import React from 'react';
 import Text from '../atoms/Text';
+import Space from '../atoms/Space';
 import ListBullet from '../atoms/ListBullet';
 
 const StyledListItem = styled.li`
-  cursor: ${(props) => (props.onClick ? 'pointer' : '')};
-  pointer-events: ${(props) => (props.disabled ? 'none' : '')};
-  opacity: ${(props) => (props.disabled ? '0.5' : '')};
-  &:hover,
-  &:focus {
-    background: ${(props) =>
-      props.onClick ? props.theme.color.translucent : ''};
-  }
   color: ${(props) => (props.color ? props.theme.color[props.color] : '')};
   width: 100%;
   height: 20px;
@@ -31,13 +23,6 @@ const StyledListItem = styled.li`
   }
 `;
 
-const Bullet = styled.span`
-  width: 6px;
-  height: 6px;
-  color: red;
-  border-radius: 50%;
-  background: #a69aec;
-`;
 const StatisticsNameWrap = styled.div`
   display: flex;
   align-items: center;
@@ -50,27 +35,27 @@ const StatisticsName = styled.span`
 const StatisticsNumberWrap = styled.div`
   display: flex;
 `;
-const StatisticsPercent = styled.span`
-  margin-left: 5px;
-  color: #a6acbe;
-`;
 
-const ListItem = ({ children, value, percent, color }, props) => {
+const ListItem = ({ children, value, percent, color }) => {
   return (
     <StyledListItem>
       <StatisticsNameWrap>
         <ListBullet classNames="fff" color={color}></ListBullet>
         <StatisticsName>
-          <Text color="greyDarker" size="s">
+          <Text className="list-item" color="greyDarker" size="xs">
             {children}
           </Text>
         </StatisticsName>
       </StatisticsNameWrap>
       <StatisticsNumberWrap>
-        <Text color="greyDarker" size="s">
+        <Text color="greyDarker" size="xs">
           {value}
         </Text>
-        <StatisticsPercent>({percent}%)</StatisticsPercent>
+        <Space margin={[0, 0, 0, 1]}>
+          <Text color="grey" size="xs">
+            ({percent}%)
+          </Text>
+        </Space>
       </StatisticsNumberWrap>
     </StyledListItem>
   );

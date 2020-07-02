@@ -41,6 +41,20 @@ const Text = styled(
     font-size: ${(props) =>
       props.size ? props.theme.fontSize[props.size] : '42px'};
   }
+
+  ${(props) =>
+    props.size === 'l' &&
+    `@media ${device.mobileL} {
+      font-size: ${theme.fontSize.xl};
+    }
+  `}
+
+  ${(props) =>
+    props.size === 'xs' &&
+    `@media ${device.mobileL} {
+      font-size: ${theme.fontSize.s};
+    }
+  `}
 `;
 
 Text.propTypes = {

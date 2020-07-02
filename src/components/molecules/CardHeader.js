@@ -61,7 +61,7 @@ const CardHeader = ({ backgroundColor, shape }) => {
     <Space padding={[3, 3, 9]}>
       <StyledCardHeader backgroundColor={backgroundColor} shape={shape}>
         <CategoryCountItem>
-          <Text weight="semibold" color="white" size="xl">
+          <Text weight="semibold" color="white" size="l">
             47
           </Text>
           <Text color="white" size="s">
@@ -69,7 +69,7 @@ const CardHeader = ({ backgroundColor, shape }) => {
           </Text>
         </CategoryCountItem>
         <CategoryCountItem>
-          <Text weight="semibold" color="white" size="xl">
+          <Text weight="semibold" color="white" size="l">
             12
           </Text>
           <Text color="white" size="s">
@@ -77,7 +77,7 @@ const CardHeader = ({ backgroundColor, shape }) => {
           </Text>
         </CategoryCountItem>
         <CategoryCountItem>
-          <Text weight="semibold" color="white" size="xl">
+          <Text weight="semibold" color="white" size="l">
             1028
           </Text>
           <Text color="white" size="s">
