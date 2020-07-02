@@ -12,11 +12,11 @@ const StyledOverallResult = styled(({ color, component, ...props }) =>
   position: relative;
 `;
 
-const OverallResult = () => {
+const OverallResult = ({ percentage }) => {
   return (
     <StyledOverallResult>
       <Text weight="semibold" absolute color="greyDarker">
-        99%
+        {percentage}%
       </Text>
       <Img width="50%" height="50%" src={image} alt="card's overall result" />
     </StyledOverallResult>

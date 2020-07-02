@@ -17,7 +17,7 @@ const Card = () => {
         <Space padding={[4, 4]}>
           <Tabs>
             <Tabs.Tab title="Overall">
-              <OverallResult />
+              <OverallResult percentage="99" />
               <Space padding={[4, 0, 0]} margin={[4, 0, 0]}>
                 <List type="unordered">
                   <ListItem value="43" percent="33" color="yellow">
@@ -35,7 +35,25 @@ const Card = () => {
                 </List>
               </Space>
             </Tabs.Tab>
-            <Tabs.Tab title="This week">Content for Two</Tabs.Tab>
+            <Tabs.Tab title="This week">
+              <OverallResult percentage="52" />
+              <Space padding={[4, 0, 0]} margin={[4, 0, 0]}>
+                <List type="unordered">
+                  <ListItem value="93" percent="32" color="yellow">
+                    Weekly Rating
+                  </ListItem>
+                  <ListItem value="14" percent="83" color="red">
+                    Weekly Standards
+                  </ListItem>
+                  <ListItem value="38" percent="99" color="green">
+                    Weekly fails
+                  </ListItem>
+                  <ListItem value="22" percent="13" color="yellow">
+                    Successful Standards
+                  </ListItem>
+                </List>
+              </Space>
+            </Tabs.Tab>
           </Tabs>
         </Space>
       </CardBody>
