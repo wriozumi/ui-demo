@@ -35,17 +35,17 @@ theme.fontFamily.roboto = 'Roboto';
 theme.fontFamily.averta = 'Averta';
 
 theme.fontSize = {};
-theme.fontSize.xxxxxl = '42px';
-theme.fontSize.xxxxl = '32px';
-theme.fontSize.xxxl = '28px';
-theme.fontSize.xxl = '24px';
-theme.fontSize.xl = '20px';
-theme.fontSize.l = '18px';
-theme.fontSize.m = '16px';
-theme.fontSize.s = '14px';
-theme.fontSize.xs = '12px';
-theme.fontSize.xxs = '10px';
-theme.fontSize.xxxs = '8px';
+theme.fontSize.xxxxxl = '2.625rem';
+theme.fontSize.xxxxl = '2rem';
+theme.fontSize.xxxl = '1.75rem';
+theme.fontSize.xxl = '1.5rem';
+theme.fontSize.xl = '1.25rem';
+theme.fontSize.l = '1.125rem';
+theme.fontSize.m = '1rem';
+theme.fontSize.s = '0.875rem';
+theme.fontSize.xs = '0.75rem';
+theme.fontSize.xxs = '0.625rem';
+theme.fontSize.xxxs = '0.5rem';
 
 theme.fontWeight = {};
 theme.fontWeight.normal = 400;
@@ -53,12 +53,12 @@ theme.fontWeight.medium = 500;
 theme.fontWeight.semibold = 600;
 theme.fontWeight.bold = 700;
 
-theme.pxScale = 5;
+theme.remScale = 0.3125;
 
 theme.px = (value) => {
   const values = [].concat(value);
   return values
-    .map((v) => (typeof v === 'string' ? v : `${v * theme.pxScale}px`))
+    .map((v) => (typeof v === 'string' ? v : `${v * theme.remScale}rem`))
     .join(' ');
 };
 

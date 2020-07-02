@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
   
   body {  
     font-family: 'Inter', sans-serif;
-    font-size: 15px;
+    font-size: 0.9375rem;
     background-color: #E5E5E5
   }
 `;

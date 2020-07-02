@@ -39,7 +39,7 @@ const Text = styled(
 
   @media ${device.mobileL} {
     font-size: ${(props) =>
-      props.size ? props.theme.fontSize[props.size] : '42px'};
+      props.size ? props.theme.fontSize[props.size] : '2.625rem'};
   }
 
   ${(props) =>

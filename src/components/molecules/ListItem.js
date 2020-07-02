@@ -8,14 +8,14 @@ import ListBullet from '../atoms/ListBullet';
 const StyledListItem = styled.li`
   color: ${(props) => (props.color ? props.theme.color[props.color] : '')};
   width: 100%;
-  height: 20px;
+  height: 1.25rem;
   color: red;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 768px;
+  max-width: 48rem;
   font-family: 'Inter';
-  margin-bottom: 21px;
+  margin-bottom: 1.3125rem;
   font-weight: 550;
 
   &:last-child {
@@ -29,8 +29,8 @@ const StatisticsNameWrap = styled.div`
 `;
 
 const StatisticsName = styled.span`
-  font-size: 12px;
-  margin: 0 25px 0 10px;
+  font-size: 0.75rem;
+  margin: 0 1.5625rem 0 0.625rem;
 `;
 const StatisticsNumberWrap = styled.div`
   display: flex;

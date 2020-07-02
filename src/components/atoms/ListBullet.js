@@ -10,8 +10,8 @@ const ListBullet = styled(
     ...props
   }) => React.createElement(component, props),
 )`
-  width: 6px;
-  height: 6px;
+  width: 0.375rem;
+  height: 0.375rem;
   border-radius: 50%;
   background: ${(props) => (props.color ? props.theme.color[props.color] : '')};
 `;

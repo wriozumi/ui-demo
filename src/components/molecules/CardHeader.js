@@ -22,7 +22,7 @@ const styles = {
 const StyledCardHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  border-width: 1px;
+  border-width: 0.0625rem;
   border-style: ${(props) => props.borderStyle};
   border-radius: ${styles.borderRadius};
   border-color: ${(props) =>
@@ -31,7 +31,7 @@ const StyledCardHeader = styled.div`
       : props.theme.color[props.backgroundColor]};
   background-color: ${(props) => props.theme.color[props.backgroundColor]};
   box-shadow: ${(props) =>
-    props.elevated ? '0 6px 16px 0 rgba(0, 0, 0, 0.16)' : ''};
+    props.elevated ? '0 0.375rem 1rem 0 rgba(0, 0, 0, 0.16)' : ''};
   padding-bottom: 45px;
   position: relative;
   bottom: -30px;
@@ -39,7 +39,7 @@ const StyledCardHeader = styled.div`
 `;
 
 const CategoryCountItem = styled.div`
-  border-right: 1px solid #a69aec;
+  border-right: 0.0625rem solid #a69aec;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -51,7 +51,7 @@ const CategoryCountItem = styled.div`
 
   div {
     &:last-child {
-      margin-top: 10px;
+      margin-top: 0.625rem;
     }
   }
 `;

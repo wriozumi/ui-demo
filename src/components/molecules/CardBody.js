@@ -26,7 +26,7 @@ const CardBody = styled(
     ...props
   }) => <View {...props} />
 )`
-  border-width: 1px;
+  border-width: 0.0625rem;
   border-style: ${(props) => props.borderStyle};
   border-radius: ${styles.borderRadius};
   border-color: ${(props) =>
@@ -35,7 +35,7 @@ const CardBody = styled(
       : props.theme.color[props.backgroundColor]};
   background-color: ${(props) => props.theme.color[props.backgroundColor]};
   box-shadow: ${(props) =>
-    props.elevated ? '0 6px 16px 0 rgba(0, 0, 0, 0.16)' : ''};
+    props.elevated ? '0 0.375rem 1rem 0 rgba(0, 0, 0, 0.16)' : ''};
 `;
 
 CardBody.propTypes = {
