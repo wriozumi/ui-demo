@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import View from '../atoms/View';
 import theme from '../theme';
-import Flex from '../atoms/Flex';
 import Text from '../atoms/Text';
 import Space from '../atoms/Space';
 
