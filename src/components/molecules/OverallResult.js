@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import theme from '../theme/index';
 import Img from '../atoms/Img';
 import Text from '../atoms/Text';
-import image from '../../assets/images/svg/CardOverallRusult.svg';
+import image from '../../assets/images/svg/CardOverallResult.svg';
 
 const StyledOverallResult = styled(({ color, component, ...props }) =>
   React.createElement(component, props)

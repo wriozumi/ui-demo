@@ -2,7 +2,7 @@ import React from 'react';
 import Container from '../atoms/Container';
 import List from '../molecules/List';
 import ListItem from '../molecules/ListItem';
-import OverallResult from '../molecules/OverallRusult';
+import OverallResult from '../molecules/OverallResult';
 import Tabs from '../molecules/Tabs';
 import Space from '../atoms/Space';
 import CardHeader from '../molecules/CardHeader';
