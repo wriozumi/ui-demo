@@ -55,7 +55,7 @@ theme.fontWeight.bold = 700;
 
 theme.remScale = 0.3125;
 
-theme.px = (value) => {
+theme.rem = (value) => {
   const values = [].concat(value);
   return values
     .map((v) => (typeof v === 'string' ? v : `${v * theme.remScale}rem`))

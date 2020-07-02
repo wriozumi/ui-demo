@@ -32,9 +32,9 @@ const StyledCardHeader = styled.div`
   background-color: ${(props) => props.theme.color[props.backgroundColor]};
   box-shadow: ${(props) =>
     props.elevated ? '0 0.375rem 1rem 0 rgba(0, 0, 0, 0.16)' : ''};
-  padding-bottom: 45px;
+  padding-bottom: 2.8125rem;
   position: relative;
-  bottom: -30px;
+  bottom: -1.875rem;
   z-index: -1;
 `;
 

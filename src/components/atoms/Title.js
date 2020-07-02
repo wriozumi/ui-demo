@@ -10,7 +10,7 @@ const Title = styled.div`
   cursor: pointer;
   font-size: ${(props) =>
     props.size ? props.theme.fontSize[props.size] : '8vw'};
-  padding: ${(props) => props.theme.px([1, 3])};
+  padding: ${(props) => props.theme.rem([1, 3])};
   color: ${(props) =>
     props.isSelected ? props.theme.color.white : props.theme.color.grey};
   background-color: ${(props) =>

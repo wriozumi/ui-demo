@@ -7,9 +7,9 @@ const Space = styled(({ margin, padding, children, ...props }) =>
 )`
   &&& {
     margin: ${(props) =>
-      props.margin ? `${props.theme.px(props.margin)}` : ''};
+      props.margin ? `${props.theme.rem(props.margin)}` : ''};
     padding: ${(props) =>
-      props.padding ? `${props.theme.px(props.padding)}` : ''};
+      props.padding ? `${props.theme.rem(props.padding)}` : ''};
   }
 `;
 
