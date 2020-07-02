@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { device } from '../theme/Breakpoints';
 
 const Container = styled.div`
   max-width: 26.5625rem;
