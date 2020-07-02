@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import View from './View';
+import View from '../atoms/View';
 import theme from '../theme';
 
 const styles = {
@@ -24,14 +24,18 @@ const CardBody = styled(
     shape,
     elevated,
     ...props
-  }) => <View {...props} />,
+  }) => <View {...props} />
 )`
-  border-width: 1px;
+  border-width: 0.0625rem;
   border-style: ${(props) => props.borderStyle};
   border-radius: ${styles.borderRadius};
-  border-color: ${(props) => props.borderColor ? props.theme.color[props.borderColor] : props.theme.color[props.backgroundColor]};
+  border-color: ${(props) =>
+    props.borderColor
+      ? props.theme.color[props.borderColor]
+      : props.theme.color[props.backgroundColor]};
   background-color: ${(props) => props.theme.color[props.backgroundColor]};
-  box-shadow: ${(props) => props.elevated ? '0 6px 16px 0 rgba(0, 0, 0, 0.16)' : ''};
+  box-shadow: ${(props) =>
+    props.elevated ? '0 0.375rem 1rem 0 rgba(0, 0, 0, 0.16)' : ''};
 `;
 
 CardBody.propTypes = {
