@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Container from '../atoms/Container';
 import List from '../molecules/List';
 import ListItem from '../molecules/ListItem';
@@ -7,7 +6,7 @@ import OverallResult from '../molecules/OverallRusult';
 import Tabs from '../molecules/Tabs';
 import Space from '../atoms/Space';
 import CardHeader from '../molecules/CardHeader';
-import CardBody from '../atoms/CardBody';
+import CardBody from '../molecules/CardBody';
 
 const Card = () => {
   return (
@@ -60,7 +59,5 @@ const Card = () => {
     </Container>
   );
 };
-
-Card.propTypes = {};
 
 export default Card;

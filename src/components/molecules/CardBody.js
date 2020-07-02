@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import View from './View';
+import View from '../atoms/View';
 import theme from '../theme';
 
 const styles = {

@@ -6,10 +6,6 @@ const Container = styled.div`
   min-width: 260px;
   margin: 0 auto;
   padding: 2rem 3rem;
-
-  @media ${device.mobileL} {
-    max-width: 425px;
-  }
 `;
 
 export default Container;
