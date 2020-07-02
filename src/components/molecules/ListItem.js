@@ -39,7 +39,7 @@ const ListItem = ({ children, value, percent, color }) => {
   return (
     <StyledListItem>
       <StatisticsNameWrap>
-        <ListBullet classNames="fff" color={color}></ListBullet>
+        <ListBullet color={color}></ListBullet>
         <StatisticsName>
           <Text className="list-item" color="greyDarker" size="xs">
             {children}
