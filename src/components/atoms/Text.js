@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { device } from '../theme/Breakpoints';
 import theme from '../theme/index';
 
 const Text = styled(
@@ -18,7 +19,8 @@ const Text = styled(
   }) => React.createElement(component, props, children)
 )`
   color: ${(props) => (props.color ? props.theme.color[props.color] : '')};
-  font-size: ${(props) => (props.size ? props.theme.fontSize[props.size] : '8vw')};
+  font-size: ${(props) =>
+    props.size ? props.theme.fontSize[props.size] : '8vw'};
   font-weight: ${(props) =>
     props.weight ? props.theme.fontWeight[props.weight] : ''};
   font-family: ${(props) =>
@@ -34,6 +36,11 @@ const Text = styled(
   transform: ${(props) => (props.absolute ? 'translate(-50%, -50%)' : '')};
   padding: 0;
   margin: 0;
+
+  @media ${device.mobileL} {
+    font-size: ${(props) =>
+      props.size ? props.theme.fontSize[props.size] : '42px'};
+  }
 `;
 
 Text.propTypes = {

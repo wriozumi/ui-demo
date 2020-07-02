@@ -9,7 +9,7 @@ import Space from '../atoms/Space';
 import CardHeader from '../molecules/CardHeader';
 import CardBody from '../atoms/CardBody';
 
-const Card = (props) => {
+const Card = () => {
   return (
     <Container>
       <CardHeader backgroundColor="blueDark" shape="bluntEdged" />
@@ -20,13 +20,13 @@ const Card = (props) => {
               <OverallResult />
               <Space padding={[4, 0, 0]} margin={[4, 0, 0]}>
                 <List type="unordered">
-                  <ListItem value="423" percent="33" color="yellow">
+                  <ListItem value="43" percent="33" color="yellow">
                     Av. Lesson Rating
                   </ListItem>
                   <ListItem value="44" percent="63" color="red">
                     Missed Standards
                   </ListItem>
-                  <ListItem value="28" percent="100" color="green">
+                  <ListItem value="28" percent="99" color="green">
                     Quiz fails
                   </ListItem>
                   <ListItem value="22" percent="13" color="yellow">
